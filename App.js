@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {
-  Alert,
   Dimensions,
   SafeAreaView,
   ScrollView,
@@ -8,11 +7,17 @@ import {
   StyleSheet,
   Text,
   View,
-  useColorScheme,
 } from 'react-native';
 
+import {
+  Gesture,
+  GestureDetector,
+  GestureHandlerRootView,
+} from 'react-native-gesture-handler';
 import Animated, {
   Easing,
+  Extrapolate,
+  interpolate,
   interpolateColor,
   useAnimatedStyle,
   useDerivedValue,
@@ -23,12 +28,6 @@ import Animated, {
 } from 'react-native-reanimated';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {color, normalize, sizes} from './src/Theme/theme';
-import {
-  Gesture,
-  GestureDetector,
-  GestureHandlerRootView,
-  PanGestureHandler,
-} from 'react-native-gesture-handler';
 const {width, heigth} = Dimensions.get('window');
 
 function BoxChangeColor() {
@@ -407,17 +406,196 @@ function BoxRotation() {
   );
 }
 
+function BoxWithDrag() {
+  const pressed = useSharedValue(false);
+  const offset = useSharedValue(0);
+
+  const pan = Gesture.Pan()
+    .onBegin(() => {
+      pressed.value = true;
+    })
+    .onChange(event => {
+      offset.value = event.translationX;
+    })
+    .onFinalize(() => {
+      offset.value = withSpring(0);
+      pressed.value = false;
+    });
+
+  const animatedStyle = useAnimatedStyle(() => {
+    return {
+      transform: [
+        {translateX: offset.value},
+        {scale: withTiming(pressed.value ? 1.2 : 1)},
+      ],
+      backgroundColor: pressed.value ? color.red : color.blue,
+    };
+  });
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.titleTxt}>Box Drag Event</Text>
+      <View height={normalize(20)} />
+      <GestureHandlerRootView
+        style={[styles.container, {borderBottomWidth: 0}]}>
+        <GestureDetector gesture={pan}>
+          <Animated.View
+            style={[
+              styles.animatedBoxContainer,
+              animatedStyle,
+              {cursor: 'grab'},
+            ]}
+          />
+        </GestureDetector>
+      </GestureHandlerRootView>
+    </View>
+  );
+}
+
+function PaginationDot() {
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const x = useSharedValue(0);
+  const size = useSharedValue(normalize(10));
+  const smallDotSize = useSharedValue(normalize(8));
+  const bigDotSize = useSharedValue(normalize(10));
+
+  const isTranslationXStarted = useSharedValue(false);
+
+  const pan = Gesture.Pan()
+    .onStart(() => {
+      isTranslationXStarted.value = true;
+    })
+    .onChange(event => {
+      let isTranslationX =
+        Math.floor(Math.abs(event.translationX) % 10) === 2 ||
+        Math.floor(Math.abs(event.translationX) % 10) === 4 ||
+        Math.floor(Math.abs(event.translationX) % 10) === 6 ||
+        Math.floor(Math.abs(event.translationX) % 10) === 8 ||
+        Math.floor(Math.abs(event.translationX) % 10) === 10;
+      if (
+        event.translationX > 0 &&
+        isTranslationX &&
+        x.value < size.value * (arr.length - 1)
+      ) {
+        x.value = x.value + size.value;
+      } else if (event.translationX < 0 && isTranslationX && x.value > 0) {
+        x.value = x.value - size.value;
+      }
+    })
+    .onEnd(() => {
+      isTranslationXStarted.value = false;
+    });
+
+  const onPressAdd = () => {
+    if (x.value < size.value * (arr.length - 1)) x.value = x.value + size.value;
+  };
+
+  const onPressSubtract = () => {
+    if (x.value > 0) x.value = x.value - size.value;
+  };
+
+  return (
+    <View style={[styles.container]}>
+      <Text style={styles.titleTxt}>Swipe to handle pagination dots</Text>
+      <View
+        style={{
+          flexDirection: 'row',
+        }}>
+        <Text
+          style={{color: color.black, fontSize: 20}}
+          onPress={onPressSubtract}>
+          -
+        </Text>
+        <GestureHandlerRootView style={{flex: 1}}>
+          <GestureDetector gesture={pan}>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                alignSelf: 'center',
+                backgroundColor: isTranslationXStarted.value
+                  ? color.magenta
+                  : color.white,
+                borderRadius: normalize(12),
+              }}>
+              {arr.map((item, index) => {
+                const animatedStyle = useAnimatedStyle(() => {
+                  return {
+                    width: interpolate(
+                      x.value,
+                      [
+                        size.value * (index - 1),
+                        size.value * index,
+                        size.value * (index + 1),
+                      ],
+                      [
+                        smallDotSize.value,
+                        bigDotSize.value,
+                        smallDotSize.value,
+                      ],
+                      Extrapolate.EXTEND,
+                    ),
+                    height: interpolate(
+                      x.value,
+                      [
+                        size.value * (index - 1),
+                        size.value * index,
+                        size.value * (index + 1),
+                      ],
+                      [
+                        smallDotSize.value,
+                        bigDotSize.value,
+                        smallDotSize.value,
+                      ],
+                      Extrapolate.EXTEND,
+                    ),
+                    backgroundColor: interpolateColor(
+                      x.value,
+                      [
+                        size.value * (index - 1),
+                        size.value * index,
+                        size.value * (index + 1),
+                      ],
+                      [color.black, color.blue, color.black],
+                    ),
+                  };
+                });
+                return (
+                  <Animated.View
+                    key={`Animated.View - ${index}`}
+                    style={[
+                      {
+                        borderRadius: normalize(50),
+                        margin: normalize(10),
+                      },
+                      animatedStyle,
+                      ,
+                    ]}
+                  />
+                );
+              })}
+            </View>
+          </GestureDetector>
+        </GestureHandlerRootView>
+        <Text style={{color: color.black, fontSize: 20}} onPress={onPressAdd}>
+          +
+        </Text>
+      </View>
+    </View>
+  );
+}
 function App() {
   const backgroundStyle = {
-    backgroundColor: Colors.lighter,
+    backgroundColor: color.white,
     flex: 1,
   };
 
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={'light-content'} backgroundColor={Colors.lighter} />
-      <View style={{flex: 1}}>
+      <View style={{flex: 1, backgroundColor: color.white}}>
         <ScrollView>
+          <PaginationDot />
           <BoxChangeColor />
           <AutoChangeBoxColor />
           <BoxMove />
@@ -428,6 +606,7 @@ function App() {
           <TapGesture />
           <DoubleTapGesture />
           <BoxRotation />
+          <BoxWithDrag />
         </ScrollView>
       </View>
     </SafeAreaView>
@@ -443,6 +622,7 @@ const styles = StyleSheet.create({
     paddingVertical: sizes.CONTAINER_PADDING_VERTICAL,
     borderBottomColor: 'rgba(0,0,0,0.1)',
     borderBottomWidth: 1,
+    flex: 1,
   },
   titleTxt: {
     fontWeight: 'bold',

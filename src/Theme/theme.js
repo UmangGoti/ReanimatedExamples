@@ -19,6 +19,7 @@ export const color = {
   yellow: 'rgb(255, 255, 0)',
   purple: 'rgb(160, 32, 240)',
   black: 'rgb(0,0,0)',
+  white: 'rgb(255,255,255)',
 };
 
 export const sizes = {
