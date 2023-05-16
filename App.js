@@ -19,9 +19,12 @@ import Animated, {
   Extrapolate,
   interpolate,
   interpolateColor,
+  scrollTo,
+  useAnimatedRef,
   useAnimatedStyle,
   useDerivedValue,
   useSharedValue,
+  withDecay,
   withRepeat,
   withSpring,
   withTiming,
@@ -452,25 +455,89 @@ function BoxWithDrag() {
   );
 }
 
+function BoxVelocityXDrag() {
+  const pressed = useSharedValue(false);
+  const offset = useSharedValue(0);
+  const store = {width: 0};
+  const SIZE = normalize(20);
+
+  const onLayout = event => {
+    store.width = event.nativeEvent.layout.width;
+  };
+
+  const pan = Gesture.Pan()
+    .onStart(() => {
+      pressed.value = true;
+    })
+    .onChange(event => {
+      offset.value += event.changeX;
+    })
+    .onFinalize(event => {
+      offset.value = withDecay({
+        velocity: event.velocityX / 500,
+        rubberBandEffect: true,
+        clamp: [-(store.width / 2) + SIZE / 2, store.width / 2 - SIZE / 2],
+      });
+      pressed.value = false;
+    });
+
+  const animatedStyle = useAnimatedStyle(() => {
+    return {
+      transform: [
+        {translateX: offset.value},
+        {scale: withTiming(pressed.value ? 1.2 : 1)},
+      ],
+      backgroundColor: pressed.value ? color.red : color.blue,
+    };
+  });
+
+  return (
+    <View style={styles.container} onLayout={onLayout}>
+      <Text style={styles.titleTxt}>Box Drag Event with velocityX</Text>
+      <View height={normalize(20)} />
+      <GestureHandlerRootView
+        style={[styles.container, {borderBottomWidth: 0}]}>
+        <GestureDetector gesture={pan}>
+          <Animated.View
+            style={[
+              styles.animatedBoxContainer,
+              animatedStyle,
+              {cursor: 'grab'},
+            ]}
+          />
+        </GestureDetector>
+      </GestureHandlerRootView>
+    </View>
+  );
+}
+
 function PaginationDot() {
+  const scrollViewRef = useAnimatedRef();
+
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const x = useSharedValue(0);
   const size = useSharedValue(normalize(10));
   const smallDotSize = useSharedValue(normalize(8));
   const bigDotSize = useSharedValue(normalize(10));
+  const translateXStarted = useSharedValue(false);
+  useDerivedValue(() => {
+    scrollTo(scrollViewRef, x.value, 0, true);
+  });
 
-  const isTranslationXStarted = useSharedValue(false);
+  const scrollViewStyle = useAnimatedStyle(() => {
+    return {
+      backgroundColor: translateXStarted.value ? color.cyan : color.white,
+    };
+  });
 
   const pan = Gesture.Pan()
     .onStart(() => {
-      isTranslationXStarted.value = true;
+      translateXStarted.value = true;
     })
     .onChange(event => {
       let isTranslationX =
         Math.floor(Math.abs(event.translationX) % 10) === 2 ||
-        Math.floor(Math.abs(event.translationX) % 10) === 4 ||
         Math.floor(Math.abs(event.translationX) % 10) === 6 ||
-        Math.floor(Math.abs(event.translationX) % 10) === 8 ||
         Math.floor(Math.abs(event.translationX) % 10) === 10;
       if (
         event.translationX > 0 &&
@@ -483,7 +550,7 @@ function PaginationDot() {
       }
     })
     .onEnd(() => {
-      isTranslationXStarted.value = false;
+      translateXStarted.value = false;
     });
 
   const onPressAdd = () => {
@@ -500,24 +567,36 @@ function PaginationDot() {
       <View
         style={{
           flexDirection: 'row',
+          height: normalize(40),
         }}>
         <Text
-          style={{color: color.black, fontSize: 20}}
+          style={{
+            color: color.black,
+            fontSize: normalize(20),
+            width: normalize(20),
+            height: normalize(20),
+          }}
           onPress={onPressSubtract}>
           -
         </Text>
         <GestureHandlerRootView style={{flex: 1}}>
           <GestureDetector gesture={pan}>
-            <View
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                alignSelf: 'center',
-                backgroundColor: isTranslationXStarted.value
-                  ? color.magenta
-                  : color.white,
-                borderRadius: normalize(12),
-              }}>
+            <Animated.ScrollView
+              ref={scrollViewRef}
+              horizontal={true}
+              scrollEnabled={false}
+              showsHorizontalScrollIndicator={false}
+              style={[
+                {
+                  width: normalize(120),
+                  borderRadius: normalize(50),
+                  paddingRight: normalize(10),
+                  alignSelf: 'center',
+                  flexDirection: 'row',
+                },
+                scrollViewStyle,
+              ]}
+              contentContainerStyle={{alignItems: 'center'}}>
               {arr.map((item, index) => {
                 const animatedStyle = useAnimatedStyle(() => {
                   return {
@@ -566,7 +645,7 @@ function PaginationDot() {
                     style={[
                       {
                         borderRadius: normalize(50),
-                        margin: normalize(10),
+                        margin: normalize(5),
                       },
                       animatedStyle,
                       ,
@@ -574,16 +653,24 @@ function PaginationDot() {
                   />
                 );
               })}
-            </View>
+            </Animated.ScrollView>
           </GestureDetector>
         </GestureHandlerRootView>
-        <Text style={{color: color.black, fontSize: 20}} onPress={onPressAdd}>
+        <Text
+          style={{
+            color: color.black,
+            fontSize: normalize(20),
+            width: normalize(20),
+            height: normalize(20),
+          }}
+          onPress={onPressAdd}>
           +
         </Text>
       </View>
     </View>
   );
 }
+
 function App() {
   const backgroundStyle = {
     backgroundColor: color.white,
@@ -606,7 +693,7 @@ function App() {
           <TapGesture />
           <DoubleTapGesture />
           <BoxRotation />
-          <BoxWithDrag />
+          <BoxVelocityXDrag />
         </ScrollView>
       </View>
     </SafeAreaView>
