@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {
   Dimensions,
   SafeAreaView,
@@ -13,13 +13,16 @@ import {
   Gesture,
   GestureDetector,
   GestureHandlerRootView,
+  TapGestureHandler,
 } from 'react-native-gesture-handler';
 import Animated, {
   Easing,
   Extrapolate,
   interpolate,
   interpolateColor,
+  measure,
   scrollTo,
+  useAnimatedGestureHandler,
   useAnimatedRef,
   useAnimatedStyle,
   useDerivedValue,
@@ -33,6 +36,75 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {color, normalize, sizes} from './src/Theme/theme';
 const {width, heigth} = Dimensions.get('window');
 
+function RippleEffectButton() {
+  const _ref = useAnimatedRef();
+  const width = useSharedValue(0);
+  const height = useSharedValue(0);
+  const scale = useSharedValue(0);
+  const opacity = useSharedValue(1);
+
+  const animatedStyles = useAnimatedStyle(() => {
+    return {
+      width: width.value,
+      height: height.value,
+      backgroundColor: color.blue,
+      opacity: opacity.value,
+      transform: [{scale: scale.value}],
+    };
+  });
+
+  const tap = useAnimatedGestureHandler({
+    onStart: event => {
+      const layout = measure(_ref);
+      width.value = layout.width;
+      height.value = layout.height;
+      scale.value = 0;
+      opacity.value = 0.6;
+      scale.value = withTiming(1, {duration: 1000});
+    },
+    onActive: () => {},
+    onFinish: () => {
+      opacity.value = withTiming(0, {duration: 1000});
+    },
+  });
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.titleTxt}>Button with Ripple Effect</Text>
+      <View height={normalize(20)} />
+      <View
+        style={[
+          styles.animatedBoxContainer,
+          {
+            backgroundColor: color.white,
+            shadowColor: color.black,
+            shadowOffset: {width: -2, height: 4},
+            shadowOpacity: 0.2,
+            shadowRadius: 3,
+          },
+        ]}>
+        <GestureHandlerRootView style={{flex: 1}}>
+          <TapGestureHandler onGestureEvent={tap}>
+            <Animated.View
+              ref={_ref}
+              style={{
+                flex: 1,
+                overflow: 'hidden',
+                borderRadius: normalize(12),
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Animated.View
+                style={[animatedStyles, {borderRadius: normalize(12)}]}
+              />
+            </Animated.View>
+          </TapGestureHandler>
+        </GestureHandlerRootView>
+      </View>
+      <View height={normalize(15)} />
+    </View>
+  );
+}
 function BoxChangeColor() {
   const boxColor = [
     color.red,
@@ -526,7 +598,7 @@ function PaginationDot() {
 
   const scrollViewStyle = useAnimatedStyle(() => {
     return {
-      backgroundColor: translateXStarted.value ? color.cyan : color.white,
+      backgroundColor: translateXStarted.value ? color.gray : color.white,
     };
   });
 
@@ -567,7 +639,7 @@ function PaginationDot() {
       <View
         style={{
           flexDirection: 'row',
-          height: normalize(40),
+          height: normalize(35),
         }}>
         <Text
           style={{
@@ -588,7 +660,7 @@ function PaginationDot() {
               showsHorizontalScrollIndicator={false}
               style={[
                 {
-                  width: normalize(120),
+                  width: normalize(70),
                   borderRadius: normalize(50),
                   paddingRight: normalize(10),
                   alignSelf: 'center',
@@ -635,7 +707,7 @@ function PaginationDot() {
                         size.value * index,
                         size.value * (index + 1),
                       ],
-                      [color.black, color.blue, color.black],
+                      [color.black_05, color.blue, color.black_05],
                     ),
                   };
                 });
@@ -682,6 +754,7 @@ function App() {
       <StatusBar barStyle={'light-content'} backgroundColor={Colors.lighter} />
       <View style={{flex: 1, backgroundColor: color.white}}>
         <ScrollView>
+          <RippleEffectButton />
           <PaginationDot />
           <BoxChangeColor />
           <AutoChangeBoxColor />
@@ -693,6 +766,7 @@ function App() {
           <TapGesture />
           <DoubleTapGesture />
           <BoxRotation />
+          <BoxWithDrag />
           <BoxVelocityXDrag />
         </ScrollView>
       </View>

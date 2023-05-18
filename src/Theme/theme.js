@@ -19,7 +19,14 @@ export const color = {
   yellow: 'rgb(255, 255, 0)',
   purple: 'rgb(160, 32, 240)',
   black: 'rgb(0,0,0)',
+  black_01: 'rgba(0,0,0,0.1)',
+  black_02: 'rgba(0,0,0,0.2)',
+  black_03: 'rgba(0,0,0,0.3)',
+  black_04: 'rgba(0,0,0,0.4)',
+  black_05: 'rgba(0,0,0,0.5)',
+  black_06: 'rgba(0,0,0,0.6)',
   white: 'rgb(255,255,255)',
+  gray: 'rgb(128,128,128)',
 };
 
 export const sizes = {
