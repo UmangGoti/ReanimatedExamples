@@ -14,6 +14,9 @@ export const color = {
   red: 'rgb(255, 0, 0)',
   green: 'rgb(0, 255, 0)',
   blue: 'rgb(0, 0, 255)',
+  blue_05: 'rgba(0, 0, 255,0.5)',
+  blue_04: 'rgba(0, 0, 255,0.4)',
+  blue_03: 'rgba(0, 0, 255,0.3)',
   cyan: 'rgb(0, 255, 255)',
   magenta: 'rgb(255, 0, 255)',
   yellow: 'rgb(255, 255, 0)',
@@ -25,6 +28,9 @@ export const color = {
   black_04: 'rgba(0,0,0,0.4)',
   black_05: 'rgba(0,0,0,0.5)',
   black_06: 'rgba(0,0,0,0.6)',
+  black_07: 'rgba(0,0,0,0.7)',
+  black_08: 'rgba(0,0,0,0.8)',
+  black_09: 'rgba(0,0,0,0.9)',
   white: 'rgb(255,255,255)',
   gray: 'rgb(128,128,128)',
 };
@@ -33,4 +39,15 @@ export const sizes = {
   CONTAINER_PADDING: normalize(20),
   CONTAINER_PADDING_VERTICAL: normalize(24),
   CONTAINER_PADDING_HRIZONTAL: normalize(16),
+};
+
+export const fonts = {
+  NUNITO_EXTRALIGHT_200: 'Nunito-ExtraLight',
+  NUNITO_LIGHT_300: 'Nunito-Light',
+  NUNITO_REGULAR_400: 'Nunito-Regular',
+  NUNITO_MEDIUM_500: 'Nunito-Medium',
+  NUNITO_SEMIBOLD_600: 'Nunito-SemiBold',
+  NUNITO_BOLD_700: 'Nunito-Bold',
+  NUNITO_EXTRABOLD_800: 'Nunito-ExtraBold',
+  NUNITO_BLACK_900: 'Nunito-Black',
 };

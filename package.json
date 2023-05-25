@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/stack": "^6.3.16",
+    "@shopify/react-native-skia": "^0.1.192",
     "react": "18.2.0",
     "react-native": "0.71.7",
     "react-native-gesture-handler": "^2.10.0",
