@@ -1,6 +1,7 @@
 export {default as AnimatedHorizontalSlider} from './AnimatedHorizontalSlider';
 export {default as AutoChangeBoxColor} from './AutoChangeBoxColor';
 export {default as AutoChangeBoxScale} from './AutoChangeBoxScale';
+export {default as AutoScrollView} from './AutoScrollView';
 export {default as BoxWithVelocityXDrag} from './BoxWithVelocityXDrag';
 export {default as LongTapOnBox} from './LongTapOnBox';
 export {default as PaginationDotWithPanGesture} from './PaginationDotWithPanGesture';

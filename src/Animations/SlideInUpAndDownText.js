@@ -82,7 +82,7 @@ const SlideInUpAndDownText = () => {
 
   const animatedFontStyle = useAnimatedStyle(() => {
     return {
-      color: withTiming(byYou.value ? color.white : color.black, {
+      color: withTiming(byYou.value ? color.blue : color.black, {
         duration: 200,
       }),
     };

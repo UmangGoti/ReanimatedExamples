@@ -11,6 +11,7 @@ import {
   AnimatedHorizontalSlider,
   AutoChangeBoxColor,
   AutoChangeBoxScale,
+  AutoScrollView,
   BoxWithVelocityXDrag,
   LongTapOnBox,
   PaginationDotWithPanGesture,
@@ -45,6 +46,7 @@ function App() {
             <SingleOrDoubleTapOnBox />
             <RotationWithScale />
             <BoxWithVelocityXDrag />
+            <AutoScrollView />
           </ScrollView>
         </View>
       </GestureHandlerRootView>
