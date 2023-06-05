@@ -33,6 +33,7 @@ export const color = {
   black_09: 'rgba(0,0,0,0.9)',
   white: 'rgb(255,255,255)',
   gray: 'rgb(128,128,128)',
+  transparent: 'transparent',
 };
 
 export const sizes = {

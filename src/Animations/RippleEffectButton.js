@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {TapGestureHandler} from 'react-native-gesture-handler';
 import Animated, {
   measure,
@@ -92,6 +92,8 @@ const styles = StyleSheet.create({
     shadowOffset: {width: -2, height: 4},
     shadowOpacity: 0.2,
     shadowRadius: 3,
+    borderWidth: 1,
+    borderColor: color.gray,
   },
   animatedBoxContainer: {
     width: normalize(50),

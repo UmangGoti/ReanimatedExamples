@@ -9,10 +9,13 @@ import {
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {
   AnimatedHorizontalSlider,
+  AnimatedLikeWithCount,
+  AnimatedNumberSlider,
   AutoChangeBoxColor,
   AutoChangeBoxScale,
   AutoScrollView,
   BoxWithVelocityXDrag,
+  CircularProgressbar,
   LongTapOnBox,
   PaginationDotWithPanGesture,
   RippleEffectButton,
@@ -33,6 +36,9 @@ function App() {
       <GestureHandlerRootView style={baseStyles.gestureHandlerRootContainer}>
         <View style={styles.container2}>
           <ScrollView showsVerticalScrollIndicator={false}>
+            <AnimatedLikeWithCount />
+            <AnimatedNumberSlider />
+            <CircularProgressbar />
             <SlideInUpAndDownText />
             <RippleEffectButton />
             <PaginationDotWithPanGesture />

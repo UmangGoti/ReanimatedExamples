@@ -35,7 +35,7 @@ export const baseStyles = StyleSheet.create({
     fontFamily: fonts.NUNITO_LIGHT_300,
   },
   buttonTxt: {
-    fontWeight: '400',
+    fontFamily: fonts.NUNITO_REGULAR_400,
     textAlign: 'justify',
     color: color.black,
   },
