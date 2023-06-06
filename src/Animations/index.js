@@ -16,3 +16,4 @@ export {default as TabToChangeColor} from './TabToChangeColor';
 export {default as TapToMoveBox} from './TapToMoveBox';
 export {default as TapToMoveBoxWithSpringEffect} from './TapToMoveBoxWithSpringEffect';
 export {default as Toast} from './Toast';
+export {default as WalletCardAnimation} from './WalletCardAnimation';
