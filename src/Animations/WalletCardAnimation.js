@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Animated,
   Dimensions,
-  SafeAreaView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -12,7 +11,7 @@ import {color, fonts, normalize, sizes} from '../Theme/theme';
 
 const CARD_HEIGHT = normalize(200);
 const CARD_TITLE = normalize(50);
-const CARD_PADDING = normalize(25);
+const CARD_PADDING = normalize(50);
 const {height} = Dimensions.get('window');
 
 const cards = [

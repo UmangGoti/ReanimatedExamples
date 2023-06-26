@@ -40,6 +40,7 @@ export const sizes = {
   CONTAINER_PADDING: normalize(20),
   CONTAINER_PADDING_VERTICAL: normalize(24),
   CONTAINER_PADDING_HRIZONTAL: normalize(16),
+  SCREEN_WIDTH: SCREEN_WIDTH,
 };
 
 export const fonts = {

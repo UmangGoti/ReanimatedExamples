@@ -1,6 +1,7 @@
 export {default as AnimatedHorizontalSlider} from './AnimatedHorizontalSlider';
 export {default as AnimatedLikeWithCount} from './AnimatedLikeWithCount';
 export {default as AnimatedNumberSlider} from './AnimatedNumberSlider';
+export {default as AnimatedScaleColorWithRotationOfBox} from './AnimatedScaleColorWithRotationOfBox';
 export {default as AutoChangeBoxColor} from './AutoChangeBoxColor';
 export {default as AutoChangeBoxScale} from './AutoChangeBoxScale';
 export {default as AutoScrollView} from './AutoScrollView';
