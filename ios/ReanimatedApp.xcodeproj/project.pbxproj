@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* ReanimatedAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReanimatedAppTests.m */; };
+		11C79BCC7698D9BF1EC3D2A9 /* libPods-ReanimatedApp-ReanimatedAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7138279F2D4AFD1CAF577C9D /* libPods-ReanimatedApp-ReanimatedAppTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1C633D8F60AE4E50AB861151 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A968CB322D36434BB6C7C65E /* Nunito-Black.ttf */; };
 		22FE4705EF6A425A987ABCA9 /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1CF1B0E18B749D5B2690856 /* Nunito-Medium.ttf */; };
 		28E33BB5E78B4F6BA182403C /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D343953E97945A29A4318C7 /* Nunito-Regular.ttf */; };
+		5D3DB6D0C6F477CC44500418 /* libPods-ReanimatedApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF6FC985EE30F95823FDF02 /* libPods-ReanimatedApp.a */; };
 		659AEFD776B4463CAA615AE2 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A5DDC9C0A0A448FA10F56BA /* Nunito-SemiBold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8571B91686E93516BF6285B1 /* libPods-ReanimatedApp-ReanimatedAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C44ADB4C1A14CA6712B8B2 /* libPods-ReanimatedApp-ReanimatedAppTests.a */; };
 		88C94A89861D452EB3F814DC /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48556068E2F14B11BDBA655C /* Nunito-Light.ttf */; };
 		A54D2EEA2FF346159097D722 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE79C585FBE49AC8671E0CA /* Nunito-Bold.ttf */; };
 		DE141C47C43B44F7B71B0060 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85BFCF746A64ED1A43FD413 /* Nunito-ExtraBold.ttf */; };
-		E24A8AD4FDD3E64EFB4693F4 /* libPods-ReanimatedApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD18BFC1B3C30B4866069C06 /* libPods-ReanimatedApp.a */; };
 		F1B9E41BAB7846D0BD25AFC8 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA3EF4B2752F432BBAE6290C /* Nunito-ExtraLight.ttf */; };
 /* End PBXBuildFile section */
 
@@ -38,26 +38,26 @@
 		00E356EE1AD99517003FC87E /* ReanimatedAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReanimatedAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ReanimatedAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReanimatedAppTests.m; sourceTree = "<group>"; };
+		0844CE1A47FE6A369D14C45B /* Pods-ReanimatedApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReanimatedApp.release.xcconfig"; path = "Target Support Files/Pods-ReanimatedApp/Pods-ReanimatedApp.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ReanimatedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReanimatedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ReanimatedApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ReanimatedApp/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ReanimatedApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReanimatedApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ReanimatedApp/main.m; sourceTree = "<group>"; };
-		21A9CBA17B35890DDEFAB45A /* Pods-ReanimatedApp-ReanimatedAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReanimatedApp-ReanimatedAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ReanimatedApp-ReanimatedAppTests/Pods-ReanimatedApp-ReanimatedAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D343953E97945A29A4318C7 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Regular.ttf"; path = "../src/Assets/Fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		330FC8C6B29852E62904DA3F /* Pods-ReanimatedApp-ReanimatedAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReanimatedApp-ReanimatedAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ReanimatedApp-ReanimatedAppTests/Pods-ReanimatedApp-ReanimatedAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3AF6FC985EE30F95823FDF02 /* libPods-ReanimatedApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReanimatedApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48556068E2F14B11BDBA655C /* Nunito-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Light.ttf"; path = "../src/Assets/Fonts/Nunito-Light.ttf"; sourceTree = "<group>"; };
 		5A5DDC9C0A0A448FA10F56BA /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-SemiBold.ttf"; path = "../src/Assets/Fonts/Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
-		64C44ADB4C1A14CA6712B8B2 /* libPods-ReanimatedApp-ReanimatedAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReanimatedApp-ReanimatedAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7138279F2D4AFD1CAF577C9D /* libPods-ReanimatedApp-ReanimatedAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReanimatedApp-ReanimatedAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C6B1484B63AB01003F6E0BA /* Pods-ReanimatedApp-ReanimatedAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReanimatedApp-ReanimatedAppTests.release.xcconfig"; path = "Target Support Files/Pods-ReanimatedApp-ReanimatedAppTests/Pods-ReanimatedApp-ReanimatedAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReanimatedApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		85C8D939BFBD387E42A59979 /* Pods-ReanimatedApp-ReanimatedAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReanimatedApp-ReanimatedAppTests.release.xcconfig"; path = "Target Support Files/Pods-ReanimatedApp-ReanimatedAppTests/Pods-ReanimatedApp-ReanimatedAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A968CB322D36434BB6C7C65E /* Nunito-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Black.ttf"; path = "../src/Assets/Fonts/Nunito-Black.ttf"; sourceTree = "<group>"; };
 		B85BFCF746A64ED1A43FD413 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraBold.ttf"; path = "../src/Assets/Fonts/Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
-		C245CAC55AFEBD4A9450E6B0 /* Pods-ReanimatedApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReanimatedApp.release.xcconfig"; path = "Target Support Files/Pods-ReanimatedApp/Pods-ReanimatedApp.release.xcconfig"; sourceTree = "<group>"; };
+		C09310C876FAAB8D3FD6EA80 /* Pods-ReanimatedApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReanimatedApp.debug.xcconfig"; path = "Target Support Files/Pods-ReanimatedApp/Pods-ReanimatedApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE79C585FBE49AC8671E0CA /* Nunito-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Bold.ttf"; path = "../src/Assets/Fonts/Nunito-Bold.ttf"; sourceTree = "<group>"; };
-		D5636F6BF4CCDF01EB16E2A9 /* Pods-ReanimatedApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReanimatedApp.debug.xcconfig"; path = "Target Support Files/Pods-ReanimatedApp/Pods-ReanimatedApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DA3EF4B2752F432BBAE6290C /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraLight.ttf"; path = "../src/Assets/Fonts/Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
-		DD18BFC1B3C30B4866069C06 /* libPods-ReanimatedApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReanimatedApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F1CF1B0E18B749D5B2690856 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Medium.ttf"; path = "../src/Assets/Fonts/Nunito-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8571B91686E93516BF6285B1 /* libPods-ReanimatedApp-ReanimatedAppTests.a in Frameworks */,
+				11C79BCC7698D9BF1EC3D2A9 /* libPods-ReanimatedApp-ReanimatedAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E24A8AD4FDD3E64EFB4693F4 /* libPods-ReanimatedApp.a in Frameworks */,
+				5D3DB6D0C6F477CC44500418 /* libPods-ReanimatedApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				DD18BFC1B3C30B4866069C06 /* libPods-ReanimatedApp.a */,
-				64C44ADB4C1A14CA6712B8B2 /* libPods-ReanimatedApp-ReanimatedAppTests.a */,
+				3AF6FC985EE30F95823FDF02 /* libPods-ReanimatedApp.a */,
+				7138279F2D4AFD1CAF577C9D /* libPods-ReanimatedApp-ReanimatedAppTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,10 +157,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D5636F6BF4CCDF01EB16E2A9 /* Pods-ReanimatedApp.debug.xcconfig */,
-				C245CAC55AFEBD4A9450E6B0 /* Pods-ReanimatedApp.release.xcconfig */,
-				21A9CBA17B35890DDEFAB45A /* Pods-ReanimatedApp-ReanimatedAppTests.debug.xcconfig */,
-				85C8D939BFBD387E42A59979 /* Pods-ReanimatedApp-ReanimatedAppTests.release.xcconfig */,
+				C09310C876FAAB8D3FD6EA80 /* Pods-ReanimatedApp.debug.xcconfig */,
+				0844CE1A47FE6A369D14C45B /* Pods-ReanimatedApp.release.xcconfig */,
+				330FC8C6B29852E62904DA3F /* Pods-ReanimatedApp-ReanimatedAppTests.debug.xcconfig */,
+				7C6B1484B63AB01003F6E0BA /* Pods-ReanimatedApp-ReanimatedAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -188,12 +188,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReanimatedAppTests" */;
 			buildPhases = (
-				C38D680A892E46D533BA61EA /* [CP] Check Pods Manifest.lock */,
+				6146EBEDAA2F4E439BA44553 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				38070B0467242B7E0DEE3D0D /* [CP] Embed Pods Frameworks */,
-				64E533C6F165B46415E4064D /* [CP] Copy Pods Resources */,
+				625FD154520085483D6E8033 /* [CP] Embed Pods Frameworks */,
+				ACC2D5488E9BAF31974405E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,14 +209,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ReanimatedApp" */;
 			buildPhases = (
-				7474669CDA53BCAD6A979479 /* [CP] Check Pods Manifest.lock */,
+				A67F1926F046ECFFD12A5F2E /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				B760963463AB4E7E702C3463 /* [CP] Embed Pods Frameworks */,
-				9B15BC05932C46F24B7B8D92 /* [CP] Copy Pods Resources */,
+				E3DE2E816C66E9916FFCA4FE /* [CP] Embed Pods Frameworks */,
+				034E2DF417A93A35C919D05D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -307,7 +307,46 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		38070B0467242B7E0DEE3D0D /* [CP] Embed Pods Frameworks */ = {
+		034E2DF417A93A35C919D05D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReanimatedApp/Pods-ReanimatedApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReanimatedApp/Pods-ReanimatedApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReanimatedApp/Pods-ReanimatedApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6146EBEDAA2F4E439BA44553 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReanimatedApp-ReanimatedAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		625FD154520085483D6E8033 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -324,24 +363,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReanimatedApp-ReanimatedAppTests/Pods-ReanimatedApp-ReanimatedAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		64E533C6F165B46415E4064D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReanimatedApp-ReanimatedAppTests/Pods-ReanimatedApp-ReanimatedAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReanimatedApp-ReanimatedAppTests/Pods-ReanimatedApp-ReanimatedAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReanimatedApp-ReanimatedAppTests/Pods-ReanimatedApp-ReanimatedAppTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7474669CDA53BCAD6A979479 /* [CP] Check Pods Manifest.lock */ = {
+		A67F1926F046ECFFD12A5F2E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,24 +385,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9B15BC05932C46F24B7B8D92 /* [CP] Copy Pods Resources */ = {
+		ACC2D5488E9BAF31974405E9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReanimatedApp/Pods-ReanimatedApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ReanimatedApp-ReanimatedAppTests/Pods-ReanimatedApp-ReanimatedAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReanimatedApp/Pods-ReanimatedApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ReanimatedApp-ReanimatedAppTests/Pods-ReanimatedApp-ReanimatedAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReanimatedApp/Pods-ReanimatedApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReanimatedApp-ReanimatedAppTests/Pods-ReanimatedApp-ReanimatedAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B760963463AB4E7E702C3463 /* [CP] Embed Pods Frameworks */ = {
+		E3DE2E816C66E9916FFCA4FE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -395,28 +417,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReanimatedApp/Pods-ReanimatedApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C38D680A892E46D533BA61EA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ReanimatedApp-ReanimatedAppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -471,7 +471,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21A9CBA17B35890DDEFAB45A /* Pods-ReanimatedApp-ReanimatedAppTests.debug.xcconfig */;
+			baseConfigurationReference = 330FC8C6B29852E62904DA3F /* Pods-ReanimatedApp-ReanimatedAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -498,7 +498,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85C8D939BFBD387E42A59979 /* Pods-ReanimatedApp-ReanimatedAppTests.release.xcconfig */;
+			baseConfigurationReference = 7C6B1484B63AB01003F6E0BA /* Pods-ReanimatedApp-ReanimatedAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -522,7 +522,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5636F6BF4CCDF01EB16E2A9 /* Pods-ReanimatedApp.debug.xcconfig */;
+			baseConfigurationReference = C09310C876FAAB8D3FD6EA80 /* Pods-ReanimatedApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -549,7 +549,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C245CAC55AFEBD4A9450E6B0 /* Pods-ReanimatedApp.release.xcconfig */;
+			baseConfigurationReference = 0844CE1A47FE6A369D14C45B /* Pods-ReanimatedApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
