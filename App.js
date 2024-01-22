@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {Fragment, useCallback, useMemo} from 'react';
 import {
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   View,
+  Text,
 } from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {
@@ -25,38 +26,44 @@ import {
   TabToChangeColor,
   TapToMoveBox,
   TapToMoveBoxWithSpringEffect,
+  MarqueeList,
+  SoundWave,
 } from './src/Animations';
-import {color, normalize, sizes} from './src/Theme/theme';
+import {color, fonts, normalize, sizes} from './src/Theme/theme';
 import {baseStyles} from './src/styles/common';
+import {NavigationContainer} from '@react-navigation/native';
 
 function App() {
   return (
-    <SafeAreaView style={styles.backgroundStyle}>
-      <StatusBar barStyle={'light-content'} backgroundColor={color.white} />
-      <GestureHandlerRootView style={baseStyles.gestureHandlerRootContainer}>
-        <View style={styles.container2}>
-          <ScrollView showsVerticalScrollIndicator={false}>
-            <AnimatedLikeWithCount />
-            <AnimatedNumberSlider />
-            <CircularProgressbar />
-            <SlideInUpAndDownText />
-            <RippleEffectButton />
-            <PaginationDotWithPanGesture />
-            <TabToChangeColor />
-            <AutoChangeBoxColor />
-            <TapToMoveBox />
-            <TapToMoveBoxWithSpringEffect />
-            <AutoChangeBoxScale />
-            <AnimatedHorizontalSlider />
-            <LongTapOnBox />
-            <SingleOrDoubleTapOnBox />
-            <RotationWithScale />
-            <BoxWithVelocityXDrag />
-            <AutoScrollView />
-          </ScrollView>
-        </View>
-      </GestureHandlerRootView>
-    </SafeAreaView>
+    <NavigationContainer>
+      <SafeAreaView style={styles.backgroundStyle}>
+        <StatusBar barStyle={'light-content'} backgroundColor={color.white} />
+        <GestureHandlerRootView style={baseStyles.gestureHandlerRootContainer}>
+          <View style={styles.container2}>
+            <ScrollView showsVerticalScrollIndicator={false}>
+              <SoundWave />
+              <AnimatedLikeWithCount />
+              <AnimatedNumberSlider />
+              <CircularProgressbar />
+              <SlideInUpAndDownText />
+              <RippleEffectButton />
+              <PaginationDotWithPanGesture />
+              <TabToChangeColor />
+              <AutoChangeBoxColor />
+              <TapToMoveBox />
+              <TapToMoveBoxWithSpringEffect />
+              <AutoChangeBoxScale />
+              <AnimatedHorizontalSlider />
+              <LongTapOnBox />
+              <SingleOrDoubleTapOnBox />
+              <RotationWithScale />
+              <BoxWithVelocityXDrag />
+              <AutoScrollView />
+            </ScrollView>
+          </View>
+        </GestureHandlerRootView>
+      </SafeAreaView>
+    </NavigationContainer>
   );
 }
 
