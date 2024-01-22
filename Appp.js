@@ -73,7 +73,7 @@ export default () => {
     }
     return () => clearInterval(interval);
   }, [start, count, addAmplitudes]);
-  //transform: [{rotate: '-180deg'}] for starting left side
+  //transform: [{rotateY: '180deg'}] for starting left side
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={{flex: 1}}>
